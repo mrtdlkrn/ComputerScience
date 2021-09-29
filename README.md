@@ -1,6 +1,5 @@
 # ComputerScience
 
-Design Patterns Nedir?
 **Design Patterns**
 
 - **Singleton**
