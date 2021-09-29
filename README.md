@@ -1,18 +1,22 @@
 # ComputerScience
 
 Design Patterns Nedir?
+**Design Patterns**
 
-     *Singleton Nedir?
-     *Prototype Nedir?
+- **Singleton**
+- **Prototype**
 
-\*Singleton Nedir?
+1. **What is Singleton ?**
 
-     *Singleton Nasıl Yazılır?
-     *Lazy Singleton Nedir?
-     *Lazy Loading ve Eager Loading Nedir?
+The Singleton Pattern is one of the best-known patterns in software engineering.
 
-\*Prototype Nedir?
+1. How does **Singleton** happen ?
+2. What is **Lazy Singleton**?
+3. What are **Lazy Loading** and **Eager Loading**?
 
-     *Prototype Nasıl Yazılır?
-     *Shallow Copy Nedir?
-     *Deep Copy Nedir?
+1. **What is Prototype ?**
+
+Prototype is a creational design pattern that allows cloning objects, even complex ones, without coupling to their specific classes.
+
+1. How does **Prototype** happen ?
+2. What are **Shallow Copy** and **Deep Copy**?
