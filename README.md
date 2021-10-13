@@ -1,6 +1,3 @@
-||||
-| :- | :-: | -: |
-
 **Design Patterns**
 
 - **Singleton**
@@ -28,32 +25,31 @@ Prototype is a creational design pattern that allows cloning objects, even 	    
 - Http / 3
 
 - **How is Http / 1.1 working ?**
-- Http / 1.1 uses **TCP** to communicate between computers.
-- TCP provides the connection. 
-  - Computer A is sends one TCP Sync message to the computer B. 
-  - Computer B sends a TCP Sync + Ack message that it has received computer A's request.
-  - Computer A sends TCP Ack message to computer B.
-  - Computer B receives an Ack "TCP connection is Established".
-  - And provides the TCP connection.
-- Http / 1.1 uses **TLS** as Security protocol.
-  - The user requests a secure connection from the internet server
-  - The internet server sends the **public key** along with the **certificate** to the user
-  - The internet browser used by the user checks whether the certificate sent by the server comes from a **trusted certificate authority** and whether the certificate is valid
-  - The internet browser the user is using generates a random **symmetric encryption key**. Then, using the public key of the internet server, it encrypts this symmetric encryption key and sends it to the internet server it is trying to connect to
-  - The Internet server obtains the symmetric key by decrypting this message, which is encrypted with its own public key, with its **private key**
-  - The internet server then sends the data it will send to the user using this symmetric key it has obtained
-  - The user securely views the web page by decrypting the data from the web server with the same symmetric key.
-
+  - Http / 1.1 uses **TCP** to communicate between computers.
+  - TCP provides the connection. 
+    - Computer A is sends one TCP Sync message to the computer B. 
+    - Computer B sends a TCP Sync + Ack message that it has received computer A's request.
+    - Computer A sends TCP Ack message to computer B.
+    - Computer B receives an Ack "TCP connection is Established".
+    - And provides the TCP connection.
+  - Http / 1.1 uses **TLS** as Security protocol.
+    - The user requests a secure connection from the internet server
+    - The internet server sends the **public key** along with the **certificate** to the user
+    - The internet browser used by the user checks whether the certificate sent by the server comes from a **trusted certificate authority** and whether the certificate is valid
+    - The internet browser the user is using generates a random **symmetric encryption key**. Then, using the public key of the internet server, it encrypts this symmetric encryption key and sends it to the internet server it is trying to connect to
+    - The Internet server obtains the symmetric key by decrypting this message, which is encrypted with its own public key, with its **private key**
+    - The internet server then sends the data it will send to the user using this **symmetric key** it has obtained
+    - The user securely views the web page by **decrypting** the data from the web server with the same **symmetric key**.
 - **How is Http /2 working ?**
-- Compromise mechanism that allows clients and servers to choose HTTP1.1, 2.0 and potentially non-HTTP protocols.
-- Maintaining a high level of compatibility with HTTP 1.1 (eg request methods, status codes, uniform resource identifiers - URI and other header fields - compatibility with header field)
-- Reducing latency to increase page load speed in web browsers by considering the following: 
-  - Data compression of HTTP headers
-  - Server push technologies
-  - Pipeline of Demands
-  - Resolving head-of-line blocking in HTTP 1
-  - Multiplexing multiple requests on a single TCP (Transmission Control Protocol) connection
-- Supporting common HTTP instances such as desktop web browsers, mobile web browsers, web APIs (Application programming interface), web servers of various scales, firewalls and content delivery networks (CDN)
+  - Compromise mechanism that allows clients and servers to choose HTTP1.1, 2.0 and potentially non-HTTP protocols.
+  - Maintaining a high level of compatibility with HTTP 1.1 (eg **request methods**, **status codes**, **uniform resource identifiers - URI** and **other header fields** - **compatibility with header field**)
+  - Reducing latency to increase page load speed in web browsers by considering the following: 
+    - Data compression of HTTP headers
+    - Server push technologies
+    - Pipeline of Demands
+    - Resolving head-of-line blocking in HTTP 1
+    - Multiplexing multiple requests on a single TCP (Transmission Control Protocol) connection
+  - Supporting common HTTP instances such as desktop web browsers, mobile web browsers, web APIs (Application programming interface), web servers of various scales, firewalls and content delivery networks (CDN)
 
 
 - **What are the differences between Http / 1.1 and Http / 2 ?**
@@ -70,9 +66,3 @@ Prototype is a creational design pattern that allows cloning objects, even 	    
   - Unlike HTTP/2, HTTP/3 is built on UDP rather than TCP.
   - Thanks to the integrated TLS 1.3 encryption, HTTP/3 forgoes an additional request for encryption at TLS level (handshakes), thus avoiding unnecessary security queries.
   - Unlike HTTP/2, HTTP/3 only supports encrypted connections due to its integrated TSL 1.3 encryption.
-
-
-
-||||
-| :- | :-: | -: |
-
