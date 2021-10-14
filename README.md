@@ -61,15 +61,15 @@ Prototype is a creational design pattern that allows cloning objects, even 	    
   - HTTP semantics are consistent across versions: the same request methods, status codes, and message fields are typically applicable to all versions. The differences are in the mapping of these semantics to underlying transports. Both HTTP/1.1 and HTTP/2 use TCP as their transport. 
   - HTTP/3 uses QUIC, a transport layer network protocol which uses user space congestion control over the User Datagram Protocol (UDP). 
 
-The switch to QUIC aims to fix a major problem of HTTP/2 called "head-of-line blocking": because the parallel nature of HTTP/2's multiplexing is not visible to TCP's loss recovery mechanisms, a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was impacted by the lost packet. Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost.
+  - The switch to QUIC aims to fix a major problem of HTTP/2 called "head-of-line blocking": because the parallel nature of HTTP/2's multiplexing is not visible to TCP's loss recovery mechanisms, a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was impacted by the lost packet. Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost.
 
 **What are the differences between Http / 2 and Http / 3 ?**
 
-Unlike HTTP/2, HTTP/3 is built on UDP rather than TCP.
+  - Unlike HTTP/2, HTTP/3 is built on UDP rather than TCP.
 
-Thanks to the integrated TLS 1.3 encryption, HTTP/3 forgoes an additional request for encryption at TLS level (handshakes), thus avoiding unnecessary security queries.
+  - Thanks to the integrated TLS 1.3 encryption, HTTP/3 forgoes an additional request for encryption at TLS level (handshakes), thus avoiding unnecessary security queries.
 
-Unlike HTTP/2, HTTP/3 only supports encrypted connections due to its integrated TSL 1.3 encryption.
+  - Unlike HTTP/2, HTTP/3 only supports encrypted connections due to its integrated TSL 1.3 encryption.
 
 **SOLID Principles**
 
